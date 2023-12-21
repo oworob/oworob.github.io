@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  background-color: #1f2736;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Segoe UI";
+  text-align: center;
+  letter-spacing: 1px;
+  height: 200vh;
+}
+body h1, body h2, body h3, body h4 {
+  font-weight: normal;
+  margin: 0;
+}
+body a {
+  color: white;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.line {
+  border-bottom: 2px solid #9acae8;
+}
+
+.textlines {
+  position: relative;
+}
+.textlines::before, .textlines::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 25%;
+  margin: 0 2%;
+  background-color: #9acae8;
+  top: 55%;
+  transform: translateY(-50%);
+}
+.textlines::before {
+  left: 0;
+}
+.textlines::after {
+  right: 0;
+}
+
+nav {
+  padding: 20px;
+  box-shadow: 0px 1px 8px 0px rgb(16, 16, 16);
+  background-color: #1c1d23;
+  border-bottom: 2px solid #9acae8;
+}
+nav #links {
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+nav #links a {
+  background-color: #1f2736;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+nav #links a:hover {
+  color: #1c1d23;
+  background-color: #9acae8;
+}
+
+#header {
+  padding: 70px 40px;
+  background-image: url("/images/sky.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#header #title {
+  margin-bottom: 20px;
+  color: #9acae8;
+  font-size: 300%;
+}
+
+section {
+  padding: 50px 200px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+section #education {
+  box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+}
+section#about {
+  background-color: #454857;
+  background: linear-gradient(#454857, #1f2736);
+  box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+}
+section#about #images {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  padding-right: 50px;
+  margin-top: 70px;
+}
+section#about #images a #image {
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+  transition: 0.3s;
+}
+section#about #images a.image1 #image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  bottom: 30px;
+  left: 40px;
+}
+section#about #images a.image1:hover {
+  z-index: 3;
+}
+section#about #images a.image1:hover #image {
+  width: 220px;
+  height: 220px;
+}
+section#about #images a.image2 {
+  z-index: 2;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+section#about #images a.image2 #image {
+  width: 250px;
+  height: 250px;
+}
+section#about #images a.image2:hover {
+  margin: 0;
+}
+section#about #images a.image2:hover #image {
+  width: 270px;
+  height: 270px;
+}
+section#about #images a.image3 #image {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  right: 30px;
+  top: 10px;
+}
+section#about #images a.image3:hover {
+  z-index: 3;
+}
+section#about #images a.image3:hover #image {
+  width: 170px;
+  height: 170px;
+}
+section#projects #projectlist {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+section#projects #projectlist #project #title {
+  font-size: 120%;
+}
+section#projects #projectlist #project #images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 25px;
+  height: 400px;
+}
+section#projects #projectlist #project #images #img label {
+  cursor: pointer;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 330px;
+  width: 70px;
+  transition: 0.3s;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+}
+section#projects #projectlist #project #images #img label:hover {
+  height: 360px;
+}
+section#projects #projectlist #project #images #img input:checked + label {
+  width: 800px;
+  height: 400px;
+  cursor: default;
+}
+section#projects #projectlist #project #images #img input[type=radio] {
+  display: none;
+}
+section#projects #projectlist #project #techs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+section#projects #projectlist #project #techs p {
+  background-color: #1f2736;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 0;
+}
+section#projects #projectlist #project #link a {
+  color: #9acae8;
+  transition: 0.2s;
+}
+section#projects #projectlist #project #link a:hover {
+  color: white;
+}
+section#skills {
+  background-color: #454857;
+  box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+}
+section#skills #bars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+section#skills #bars #skill p {
+  margin: 0;
+  text-align: left;
+}
+section#skills #bars #skill #bar {
+  background-color: #1f2736;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+}
+section#skills #bars #skill #bar #inner {
+  border-radius: 5px;
+  background-color: #9acae8;
+  margin: 3px;
+  height: 5px;
+}
+section #left {
+  padding: 20px 50px;
+}
+section #title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+}
+section #title #icon {
+  font-size: 130%;
+  color: #9acae8;
+  border-radius: 50%;
+  border: 2px solid #9acae8;
+  padding: 10px;
+  background-color: #1f2736;
+}
+section h3 {
+  padding: 10px;
+}
+section p {
+  padding: 10px;
+  font-size: 90%;
+}
+section #image {
+  border-radius: 0 25px 25px 0;
+  background-size: cover;
+  background-position: center;
+}/*# sourceMappingURL=style.css.map */

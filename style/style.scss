@@ -1,0 +1,319 @@
+// VARIABLES
+$bc-dark: #1c1d23;
+$bc: #1f2736;
+$bc-light: #454857;
+$bc-lighter: #5d606e;
+$themecolor: #9acae8;
+
+// GLOBAL
+
+body {
+    margin: 0;
+    background-color: $bc;
+    background-attachment: fixed;
+    color: white;
+    font-family:'Segoe UI';
+    text-align: center;
+    letter-spacing: 1px;
+    
+    h1, h2, h3, h4 {
+        font-weight: normal;
+        margin: 0;
+    }
+    height: 200vh; // placeholder
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+// CLASSES
+
+.line {
+    border-bottom: 2px solid $themecolor;
+}
+
+.textlines {
+    position: relative;
+    &::before,
+    &::after {
+    content: ""; // Dodanie pustej zawartości
+    position: absolute; // Ustawienie pozycji na absolute
+    height: 2px; // Grubość linii
+    width: 25%; // Szerokość linii (możesz dostosować według potrzeb)
+    margin: 0 2%;
+    background-color: $themecolor; // Kolor linii (możesz dostosować według potrzeb)
+    top: 55%; // Pozycja w pionie na środku elementu h1
+    transform: translateY(-50%); // Doprecyzowanie pozycji pionowej na środku elementu h1
+    }
+    &::before {
+        left: 0; // Linia po lewej stronie
+      }
+      
+    &::after {
+        right: 0; // Linia po prawej stronie
+      }
+}
+
+// MAIN
+
+nav {
+    padding: 20px; 
+    box-shadow: 0px 1px 8px 0px rgb(16, 16, 16);
+    background-color: $bc-dark;
+    border-bottom: 2px solid $themecolor;
+    #links {
+        justify-content: center;
+        display: flex;
+        gap: 20px;
+       
+        a {
+            background-color: $bc;
+            border: 2px solid white;
+            border-radius: 10px;
+            position: relative;
+            transition: 0.3s;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:hover {
+                color: $bc-dark;
+                background-color: $themecolor;
+            }
+              
+        }
+    }
+}
+
+
+#header {
+    padding: 70px 40px;
+    background-image: url('/images/sky.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    #title {
+        margin-bottom: 20px;
+        color: $themecolor;
+        font-size: 300%;
+    }
+   
+}
+
+section {
+    padding: 50px 200px;
+
+    #education {
+        box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+    }
+    &#about {
+        background-color: $bc-light;
+        background: linear-gradient($bc-light,$bc);
+        box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+        #images {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            padding-right: 50px;
+            margin-top: 70px;
+            a {
+                #image {
+                    border-radius: 50%;
+                    box-shadow: 0px 4px 8px 0px rgba(16, 16, 16,0.25);
+                    transition: 0.3s;
+                }
+                &.image1 {
+                    #image {
+                        width: 200px;
+                        height: 200px;
+                        position: relative;
+                        bottom: 30px;
+                        left: 40px;
+                    }
+                    &:hover {
+                        z-index: 3;
+                        #image {
+                            width: 220px;
+                            height: 220px;
+                        } 
+                    }
+                }
+                &.image2 {
+                    z-index: 2;
+                    margin-bottom: 20px;
+                    transition: 0.3s;
+                    #image {
+                        width: 250px;
+                        height: 250px;
+                    }
+                    &:hover {
+                        margin: 0;
+                        #image {
+                            width: 270px;
+                            height: 270px;
+                        } 
+                    }
+                }
+                &.image3 {
+                    #image {
+                        width: 150px;
+                        height: 150px;
+                        position: relative;
+                        right: 30px;
+                        top: 10px;
+                    }
+                    &:hover {
+                        z-index: 3;
+                        #image {
+                            width: 170px;
+                            height: 170px;
+                        } 
+                    }
+                }
+                
+                
+            }
+           
+        }
+    }
+
+    &#projects {
+        #projectlist {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            justify-content: center;
+            
+            #project {
+                #title {
+                    font-size: 120%;
+                }
+                    #images {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 4px;
+                        margin-bottom: 25px;
+                        height: 400px;
+                        #img {
+                            label {
+                                cursor: pointer;
+                                display: block;
+                                background-size: cover;
+                                background-position: center;
+                                background-repeat: no-repeat;
+                                height: 330px;
+                                width: 70px;
+                                transition: 0.3s;
+                                border-radius: 10px;
+                                box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+                                &:hover {
+                                    height: 360px;
+                                }
+                            }
+                            input:checked + label {
+                                width: 800px;
+                                height: 400px;
+                                cursor: default;
+                            }
+                            input[type="radio"] {
+                                display: none;
+                            }
+                        }
+                    }
+                    #techs {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        p {
+                            background-color: $bc;
+                            border: 2px solid white;
+                            border-radius: 10px;
+                            padding: 5px 20px;
+                            margin: 0;
+                        }
+                    }
+                    #link {
+                        a {
+                            color: $themecolor;
+                            transition: 0.2s;
+                            &:hover {
+                                color: white;
+                            }
+                        }
+                    }
+            }
+        }
+    }
+
+    &#skills {
+        background-color: $bc-light;
+        box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+        #bars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            #skill {
+                p {
+                    margin: 0;
+                    text-align: left;
+                }
+                #bar {
+                        background-color: $bc;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        box-shadow: 0px 4px 8px 0px rgba(16, 16, 16, 0.25);
+                
+                        #inner {
+                            border-radius: 5px;
+                            background-color: $themecolor;
+                            margin: 3px;
+                            height: 5px;
+                        }
+                    }
+            }
+        }
+    }
+
+    background-color: rgba(0, 0, 0, 0.2);
+ 
+    #left {
+        padding: 20px 50px;
+    }
+    #title {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             padding: 5px;
+             #icon {
+                 font-size: 130%;
+                 color: $themecolor;
+                 border-radius: 50%;
+                 border: 2px solid $themecolor;
+                 padding: 10px;
+                 background-color: $bc;
+             }
+         }
+   
+    h3 {
+        padding: 10px;
+    }
+    p {
+        padding: 10px;
+        font-size: 90%;
+    }
+    #image {
+        border-radius: 0 25px 25px 0;
+        background-size: cover; 
+        background-position: center;
+    }
+
+}
