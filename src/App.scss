@@ -1,0 +1,522 @@
+$bc: #16181a;
+$theme: #1f8261;
+
+body {
+  margin: 0;
+  background-color: $bc;
+  font-weight: 100;
+  color: white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  h1, h2, h3, h4, p {
+    margin: 0;
+    &:not(p) {
+      font-weight: 400;
+    }
+  }
+  ul ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  li::marker {
+    color: $theme;
+  }
+  hr {
+    opacity: 0.1;
+    margin: 1em 0;
+  }
+  @media (max-width:500px) {
+    ul {
+      padding-inline-start: 30px;
+    }
+  }
+}
+
+.color {
+  color: $theme;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+.hoverlink {
+  transition: 0.3s;
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
+}
+
+.button {
+  padding: 10px 30px;
+  border: 1px solid $theme;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 12px;
+  width: fit-content;
+  &:hover {
+    background-color: $theme;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+#App {
+  display: flex;
+  font-size: 120%;
+  font-family: 'Segoe UI', 'Noto Sans', 'Roboto';
+}
+
+#Nav {
+  background-color: $theme;
+  padding: 10px;
+  color: white;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+  height: 100vh;
+  overflow: hidden;
+  transition: 0.3s;
+  width: 40px;
+  position: fixed;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  z-index: 10;
+  height: 100%;
+  
+  #header {
+    opacity: 0;
+    text-wrap: nowrap;
+    margin: 30px 10px;
+    transition: 0.3s;
+  }
+  
+  #link {
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    #icon {
+      transition: 0.3s;
+      text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    }
+    span {
+      width: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+      &.bold {
+        font-weight: 400;
+      }
+    }
+    &:hover {
+      #icon {
+        transform: rotate(-10deg);
+      }
+      @media (min-width:500px) {
+        margin-left: 10px;
+      }
+    }
+  }
+  &.navshown {
+    @media (min-width:500px) {
+      width: 180px;
+      #link span, #header {
+        opacity: 1;
+      }
+    }
+  }
+  @media (max-width:500px) {
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    height: unset;
+    #links {
+      display: flex;
+      #link span {
+        display: none;
+      }
+    }
+    #header {
+      display: none;
+    }
+  }
+}
+
+#App>div:not(:first-child) {
+  @media (min-width:500px) {
+    margin-left: 60px;
+  }
+  @media (max-width:500px) {
+    margin-top: 60px;
+  }
+  padding: 40px 80px;
+  font-size: 105%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  @media (max-width:500px) {
+    gap: 20px;
+  }
+  #content h3 {
+    margin-bottom: 10px;
+  }
+  #icon {
+    font-size: 80%;
+  }
+  @media (max-width:500px) {
+    padding: 20px 40px;
+  }
+}
+
+#Home {
+  width: 100%;
+  #header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    h1>#icon {
+      @keyframes wave {
+        0%, 40%, 100% {
+          transform: rotate(-20deg);
+        }
+        20% {
+          transform: rotate(20deg) translateX(10px) translateY(-5px);
+        }
+       
+      }
+      animation: wave 2s infinite ease-in-out;
+    }
+  }
+  #bottom {
+    p {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      a {
+        width: 200px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#Projects {
+  #project {
+    display: flex;
+    gap: 50px;
+    #left {
+      width: 50%;
+      >#title {
+        margin-bottom: 10px;
+        #title {
+          transition: 0.3s;
+          &:hover {
+            color: $theme;
+          }
+        }
+        #date {
+          opacity: 0.5;
+          font-size: 80%;
+        }
+      }
+      #content {
+        .button {
+          margin-top: 50px;
+          margin-right: 20px;
+          @media (max-width:600px) {
+            margin-top: 20px;
+          }
+          display: block;
+        }
+        #buttons {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+    #image {
+      width: 50%;
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+      }
+    }
+    @media (max-width:1000px) {
+      flex-direction: column;
+      #left, #image {
+        width: unset;
+      }
+    }
+    
+  }
+}
+
+#Project {
+  #header {
+    #date {
+        opacity: 0.5;
+        font-size: 80%;
+        margin-bottom: 1em;
+      }
+    #subheader {
+      display: flex;
+      gap: 40px;
+      #logo {
+        max-width: 30%;
+        margin: 20px 40px;
+        align-self: center;
+      }
+      @media (max-width:1000px) {
+        flex-direction: column-reverse;
+        #logo {
+          max-width: 100%;
+          margin: none;
+        }
+      }
+    }
+  }
+  #content {
+    display: grid;
+    transition: 0.3s;
+    gap: 40px;
+    grid-template-columns: 5fr 2fr;
+    @media (max-width:800px) {
+      grid-template-columns: 1fr;
+    }
+    #images {
+      order: -1;
+      grid-template-columns: 5fr 2fr;
+        @media (max-width:800px) {
+          order: unset;
+        }
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      @media (max-width:600px) {
+          gap: 15px;
+        }
+      img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+        @media (max-width:600px) {
+          margin-left: -30px;
+          width: calc(100% + 60px);
+        }
+        
+      }
+    }
+    #more {
+      #link {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+#Contact {
+  width: 100%;
+  #contacts {
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+      @media (max-width:1000px) {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+    #contact {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      #icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $theme;
+        padding: 20px;
+        font-size: 150%;
+        border-radius: 50%;
+        transition: 0.3s;
+      }
+      &:has(#icon:hover), &:has(#name:hover) {
+        #icon {
+          background-color: $theme;
+        }
+      }
+      #about {
+        margin-top: 20px;
+        font-size: 80%;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+#About {
+  #main {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    p {
+      margin: 15px 0;
+    }
+    @media (max-width: 1000px) {
+        flex-direction: column-reverse;
+        #about h2 {
+          text-align: center;
+        }
+      }
+    #pfp {
+      max-width: 25%;
+      max-height: 250px;
+      margin: 50px;
+      padding: 6px;
+      background-color: $theme;
+      @media (max-width:900px) {
+        max-width: 50%;
+      }
+      @media (max-width:600px) {
+        max-width: 80%;
+      }
+      border-radius: 50%;
+      margin: 0 50px;
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+      transform: rotate(-10deg);
+    }
+  }
+  #hobbies {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    p {
+      margin: 15px 0;
+    }
+    #art {
+      display: flex;
+      gap: 60px;
+      @media (max-width:1000px) {
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+      }
+      #images {
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+            "image1 image2"
+            "image1 image3";
+        img {
+          box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          max-width: 100%;
+          &#image1 {
+            grid-area: image1;
+            align-self: center;
+          }
+          &#image2 {
+            align-self: flex-end;
+          }
+          &#image3 {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: 1px solid $theme;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  font-size: 110%;
+  transition: 0.3s;
+  background: none;
+  color: white;
+  opacity: 0;
+  background-color: $bc;
+  &:hover {
+    background-color: #1f8261;
+  }
+  &:not(&.hidden) {
+    cursor: pointer;
+    opacity: 1;
+  }
+}
+
+#collapsable {
+  h3 {
+    cursor: pointer;
+    #arrow {
+      @extend #icon;
+      transition: 0.5s;
+      margin-left: 5px;
+      &:not(.shown) {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &:hover {
+      #arrow {
+        color: white;
+      }
+    }
+  }
+
+  #collapsable-wrapper {
+    transition: 0.5s;
+    overflow: hidden;
+    opacity: 0;
+    &.shown {
+      opacity: 1;
+    }
+  }
+}
+
+#Skills {
+  h3 {
+    margin-bottom: 20px;
+  }
+}
