@@ -5,14 +5,21 @@ export function Home() {
     return <div id="Home">
         <div id="header">
             <h1>Hello there! <i className='fas fa-hand shake color' id='icon' /></h1>
-            <p>I'm Olga, a passionate, young (and continuously learning) web, ocassionally video game developer.</p>
+            <p>I'm Olga, a passionate, young (and continuously learning) web developer, ocassionally video game developer.</p>
             <h4>Shall we create something together? <i className='fas fa-palette color' id='icon' /></h4>
         </div>
 
         <div id="content">
             <h4>What am I up to now? <i className='fas fa-glasses color' id='icon' /></h4>
             <p>Currently working as a full stack software developer intern at <a href='https://samsungrd.pl/en' className='color bold hoverlink'>Samsung R&D Institute Poland</a>!</p>
-            
+            <br/>
+            <p className='bold'>Learning... </p>
+            <ul>
+                <li>Next.js with Prisma</li>
+                <li>Tailwind</li>
+                <li>Angular with Material</li>
+            </ul>
+            <p>And playing <a href="https://cssbattle.dev/" className='color bold hoverlink'>CSS Battles!</a></p>
         </div>
 
         <hr/>
