@@ -13,6 +13,7 @@ import { Contact } from './components/Contact';
 import { About } from './components/About';
 import { ScrollButton } from './components/ScrollButton';
 import projects from './projects';
+import { Experience } from './components/Experience';
 
 interface ProjectsObject {
   [key: string]: {
@@ -44,6 +45,7 @@ function App() {
           {Object.entries(ProjectsData).map(([id, project]) => 
             <Route path={'/projects/'+id} key={id} element={<Project project={project} />} />
           )}
+          <Route path='/experience' element={<Experience />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>

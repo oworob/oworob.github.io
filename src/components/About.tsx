@@ -12,12 +12,13 @@ export function About() {
             <div id="main">
                 <div id="about">
                     <h2>Hello :)</h2>
-                    <p>My name is Olga, and I recently graduated in Computer Science from Gdańsk University.</p>
+                    <p>My name is Olga, although feel free to just call me Ola, and I recently graduated in Computer Science from Gdańsk University.</p>
                     <p>My fascination with the realm of programming began as a child, and it has only grown stronger over the years. As I delved deeper into the world of technology, I discovered my passion for web development, UI design, and game development. With every line of code, driven by ambition and creativity, I strive to become a proficient developer and bring innovative ideas to life. Once invested in a project, I will not stop working until it is pixel perfect.</p>
                     <p>If you are looking for a dedicated and thorough individual to join your team, one who values quality over quantity, I'm up for the task!</p>
                 </div>
-        <img id='pfp' src="pfp.jpg" alt="me"></img>
+                <img id='pfp' src="pfp.jpg" alt="me"></img>
             </div>
+        </div>
             <hr/>
             <h3>What else do I do?</h3>
             <ul id="hobbies">
@@ -36,9 +37,20 @@ export function About() {
                 </li>
                 {/* <li>
                     <h4>Writing <i id="icon" className='fas fa-pen-nib' /></h4>
+                </li>
+                 <li id="games">
+                    <div id="header">
+                        <h4><li>Video Games <i id="icon" className='fas fa-gamepad'/> </li></h4>
+                        <p>A builder, a roleplayer, a raider.</p>
+                        <p>Since my early days I've been passionate about video games.</p>
+                    </div>
+                    <div id="images">
+                      
+                    </div>
                 </li> */}
+              
             </ul>
         </div>
-    </div>
+    
 
 }

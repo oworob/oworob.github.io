@@ -4,8 +4,9 @@ import { useState } from 'react';
 const links = {
     '/': { icon: 'fa-house', text: 'Home' },
     '/about': { icon: 'fa-heart', text: 'About' },
-    '/skills': { icon: 'fa-wrench', text: 'Skills' },
+    '/experience': { icon: 'fa-briefcase', text: 'Experience' },
     '/projects': { icon: 'fa-pen', text: 'Projects' },
+    '/skills': { icon: 'fa-wrench', text: 'Skills' },
     '/contact': { icon: 'fa-envelope', text: 'Contact' },
 };
 

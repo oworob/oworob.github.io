@@ -176,7 +176,7 @@ body {
   font-size: 105%;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 40px;
   @media (max-width:500px) {
     gap: 20px;
   }
@@ -519,4 +519,77 @@ body {
   h3 {
     margin-bottom: 20px;
   }
+}
+
+#Experience {
+  gap: 20px !important;
+  width: 100%;
+  ul {
+    display: flex;
+    flex-direction: column;
+    li#position {
+      position: relative;
+      padding-bottom: 20px;
+      #positiondetailswrapper {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        @media (max-width:800px) {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+      #imgwrapper {
+        padding: 30px;
+        img {
+          max-height: 100px;
+          max-width: 200px;
+        }
+      } 
+      &::marker {
+        font-size: 160%;
+      }
+      &:before {
+        background-color: $theme;
+        width: 2.5px;
+        border-radius: 10px;
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0px;
+        left: -24px;
+      }
+      &:first-child:before {
+        top: 20px;
+      }
+      h3 {
+        margin: 0 !important;
+      }
+      #date {
+        opacity: 0.5;
+        font-size: 70%;
+      }
+      #company {
+        font-size: 80%;
+      }
+      #about {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+// SCROLLBAR
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $theme;
+  border-radius: 10px;
 }

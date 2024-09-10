@@ -11,13 +11,13 @@ export function Home() {
 
         <div id="content">
             <h4>What am I up to now? <i className='fas fa-glasses color' id='icon' /></h4>
-            <p>Currently working as a full stack software developer intern at <a href='https://samsungrd.pl/en' className='color bold hoverlink'>Samsung R&D Institute Poland</a>!</p>
+            <p>Currently working as a Fullstack Software Developer Intern at <a href='https://samsungrd.pl/en' className='color bold hoverlink'>Samsung R&D Institute Poland</a>!</p>
             <br/>
-            <p className='bold'>Learning... </p>
+            <p className='bold'>Learning and polishing skills... </p>
             <ul>
-                <li>Next.js with Prisma</li>
                 <li>Tailwind</li>
                 <li>Angular with Material</li>
+                <li>Vue3</li>
             </ul>
             <p>And playing <a href="https://cssbattle.dev/" className='color bold hoverlink'>CSS Battles!</a></p>
         </div>
