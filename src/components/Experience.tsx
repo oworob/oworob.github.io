@@ -12,7 +12,7 @@ const jobs = [
                     <li>Acted as a lead developer in a small, international team</li>
                 </ul>,
         company: "Freelance",
-        picture: "Roblox.png"
+        picture: "roblox.png"
     },
     {
         title: "Fullstack Software Developer Intern",
@@ -24,7 +24,7 @@ const jobs = [
                     <li>Improved the application's user interface and experience</li>
                 </ul>,
         company: "Samsung R&D Institute Poland",
-        picture: 'Samsung.png'
+        picture: 'samsung.png'
     },
     
 ]
