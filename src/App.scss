@@ -474,6 +474,9 @@ body {
 #scroll-up {
   position: fixed;
   bottom: 20px;
+  @media (max-width: 500px) {
+    top: 20px;
+  }
   right: 20px;
   border: 1px solid $theme;
   border-radius: 50%;
