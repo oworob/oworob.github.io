@@ -10,7 +10,11 @@ body {
     color: white;
     text-decoration: none;
   }
-  h1, h2, h3, h4, p {
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
     margin: 0;
     &:not(p) {
       font-weight: 400;
@@ -27,7 +31,7 @@ body {
     opacity: 0.1;
     margin: 1em 0;
   }
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     ul {
       padding-inline-start: 30px;
     }
@@ -105,14 +109,14 @@ body {
   justify-content: space-between;
   z-index: 10;
   height: 100%;
-  
+
   #header {
     opacity: 0;
     text-wrap: nowrap;
     margin: 30px 10px;
     transition: 0.3s;
   }
-  
+
   #link {
     padding: 5px 10px;
     display: flex;
@@ -135,20 +139,21 @@ body {
       #icon {
         transform: rotate(-10deg);
       }
-      @media (min-width:500px) {
+      @media (min-width: 500px) {
         margin-left: 10px;
       }
     }
   }
   &.navshown {
-    @media (min-width:500px) {
+    @media (min-width: 500px) {
       width: 180px;
-      #link span, #header {
+      #link span,
+      #header {
         opacity: 1;
       }
     }
   }
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     flex-direction: row-reverse;
     justify-content: center;
     width: 100%;
@@ -165,11 +170,11 @@ body {
   }
 }
 
-#App>div:not(:first-child) {
-  @media (min-width:500px) {
+#App > div:not(:first-child) {
+  @media (min-width: 500px) {
     margin-left: 60px;
   }
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     margin-top: 60px;
   }
   padding: 40px 80px;
@@ -177,7 +182,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     gap: 20px;
   }
   #content h3 {
@@ -186,7 +191,7 @@ body {
   #icon {
     font-size: 80%;
   }
-  @media (max-width:500px) {
+  @media (max-width: 500px) {
     padding: 20px 40px;
   }
 }
@@ -197,15 +202,16 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    h1>#icon {
+    h1 > #icon {
       @keyframes wave {
-        0%, 40%, 100% {
+        0%,
+        40%,
+        100% {
           transform: rotate(-20deg);
         }
         20% {
           transform: rotate(20deg) translateX(10px) translateY(-5px);
         }
-       
       }
       animation: wave 2s infinite ease-in-out;
     }
@@ -234,7 +240,7 @@ body {
     gap: 50px;
     #left {
       width: 50%;
-      >#title {
+      > #title {
         margin-bottom: 10px;
         #title {
           transition: 0.3s;
@@ -251,7 +257,7 @@ body {
         .button {
           margin-top: 50px;
           margin-right: 20px;
-          @media (max-width:600px) {
+          @media (max-width: 600px) {
             margin-top: 20px;
           }
           display: block;
@@ -270,23 +276,23 @@ body {
         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
       }
     }
-    @media (max-width:1000px) {
+    @media (max-width: 1000px) {
       flex-direction: column;
-      #left, #image {
+      #left,
+      #image {
         width: unset;
       }
     }
-    
   }
 }
 
 #Project {
   #header {
     #date {
-        opacity: 0.5;
-        font-size: 80%;
-        margin-bottom: 1em;
-      }
+      opacity: 0.5;
+      font-size: 80%;
+      margin-bottom: 1em;
+    }
     #subheader {
       display: flex;
       gap: 40px;
@@ -295,7 +301,7 @@ body {
         margin: 20px 40px;
         align-self: center;
       }
-      @media (max-width:1000px) {
+      @media (max-width: 1000px) {
         flex-direction: column-reverse;
         #logo {
           max-width: 100%;
@@ -309,30 +315,29 @@ body {
     transition: 0.3s;
     gap: 40px;
     grid-template-columns: 5fr 2fr;
-    @media (max-width:800px) {
+    @media (max-width: 800px) {
       grid-template-columns: 1fr;
     }
     #images {
       order: -1;
       grid-template-columns: 5fr 2fr;
-        @media (max-width:800px) {
-          order: unset;
-        }
+      @media (max-width: 800px) {
+        order: unset;
+      }
       display: flex;
       flex-direction: column;
       gap: 30px;
-      @media (max-width:600px) {
-          gap: 15px;
-        }
+      @media (max-width: 600px) {
+        gap: 15px;
+      }
       img {
         width: 100%;
         border-radius: 10px;
         box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
-        @media (max-width:600px) {
+        @media (max-width: 600px) {
           margin-left: -30px;
           width: calc(100% + 60px);
         }
-        
       }
     }
     #more {
@@ -350,10 +355,10 @@ body {
     margin: 0 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-      @media (max-width:1000px) {
-        grid-template-columns: 1fr;
-        gap: 50px;
-      }
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
     #contact {
       display: flex;
       flex-direction: column;
@@ -371,7 +376,8 @@ body {
         border-radius: 50%;
         transition: 0.3s;
       }
-      &:has(#icon:hover), &:has(#name:hover) {
+      &:has(#icon:hover),
+      &:has(#name:hover) {
         #icon {
           background-color: $theme;
         }
@@ -395,21 +401,21 @@ body {
       margin: 15px 0;
     }
     @media (max-width: 1000px) {
-        flex-direction: column-reverse;
-        #about h2 {
-          text-align: center;
-        }
+      flex-direction: column-reverse;
+      #about h2 {
+        text-align: center;
       }
+    }
     #pfp {
       max-width: 25%;
       max-height: 250px;
       margin: 50px;
       padding: 6px;
       background-color: $theme;
-      @media (max-width:900px) {
+      @media (max-width: 900px) {
         max-width: 50%;
       }
-      @media (max-width:600px) {
+      @media (max-width: 600px) {
         max-width: 80%;
       }
       border-radius: 50%;
@@ -428,17 +434,17 @@ body {
     #art {
       display: flex;
       gap: 60px;
-      @media (max-width:1000px) {
+      @media (max-width: 1000px) {
         flex-direction: column;
         align-items: center;
-        gap:10px;
+        gap: 10px;
       }
       #images {
         display: grid;
         gap: 10px;
         grid-template-areas:
-            "image1 image2"
-            "image1 image3";
+          'image1 image2'
+          'image1 image3';
         img {
           box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
           border-radius: 10px;
@@ -524,56 +530,82 @@ body {
 #Experience {
   gap: 20px !important;
   width: 100%;
-  ul {
+
+  #job-list {
     display: flex;
     flex-direction: column;
-    li#position {
-      position: relative;
-      padding-bottom: 20px;
-      #positiondetailswrapper {
-        display: flex;
-        align-items: center;
-        gap: 80px;
-        @media (max-width:800px) {
-          flex-direction: column;
-          gap: 0;
-        }
+    margin-top: 0;
+    #position-wrapper {
+      display: grid;
+      grid-template-columns: 2px auto;
+      gap: 20px;
+      &:first-child #timeline-piece {
+        margin-top: 1.4em;
       }
-      #imgwrapper {
-        padding: 30px;
-        img {
-          max-height: 100px;
-          max-width: 200px;
-        }
-      } 
-      &::marker {
-        font-size: 160%;
+      &:not(:first-child) #timeline-piece {
+        padding-top: 1.4em;
       }
-      &:before {
+      #timeline-piece {
         background-color: $theme;
-        width: 2.5px;
-        border-radius: 10px;
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0px;
-        left: -24px;
+        #dot {
+          background-color: $theme;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          position: relative;
+          right: 4px;
+        }
       }
-      &:first-child:before {
-        top: 20px;
-      }
-      h3 {
-        margin: 0 !important;
-      }
-      #date {
-        opacity: 0.5;
-        font-size: 70%;
-      }
-      #company {
-        font-size: 80%;
-      }
-      #about {
-        margin-top: 10px;
+      li#position {
+        position: relative;
+        padding-bottom: 20px;
+        list-style-type: none;
+        #positiondetailswrapper {
+          display: flex;
+          align-items: center;
+          gap: 80px;
+          @media (max-width: 800px) {
+            flex-direction: column;
+            gap: 0;
+          }
+        }
+        #imgwrapper {
+          padding: 30px;
+          img {
+            max-height: 100px;
+            max-width: 200px;
+          }
+        }
+        // &::marker {
+        //   // font-size: 160%;
+        //   display: none !important;
+        // }
+        // &:before {
+        //   background-color: $theme;
+        //   width: 2.5px;
+        //   border-radius: 10px;
+        //   content: '';
+        //   position: absolute;
+        //   top: 0;
+        //   bottom: 0px;
+        //   left: -24px;
+        // }
+        &:first-child:before {
+          top: 20px;
+        }
+        h3 {
+          margin: 0 !important;
+        }
+        #date {
+          opacity: 0.5;
+          font-size: 70%;
+        }
+        #company {
+          font-size: 80%;
+        }
+        #about {
+          margin-top: 10px;
+        }
       }
     }
   }
