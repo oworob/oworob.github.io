@@ -97,6 +97,11 @@ body {
 #Nav {
   background-color: $theme;
   padding: 10px;
+  @media (max-width: 500px) {
+    padding: 5px;
+    border-bottom: 100px solid $theme;
+    margin-bottom: -100px;
+  }
   color: white;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
   height: 100vh;
@@ -119,6 +124,9 @@ body {
 
   #link {
     padding: 5px 10px;
+    @media (max-width: 500px) {
+      padding: 10px 10px;
+    }
     display: flex;
     align-items: center;
     gap: 10px;
@@ -158,6 +166,7 @@ body {
     justify-content: center;
     width: 100%;
     height: unset;
+    bottom: 0;
     #links {
       display: flex;
       #link span {
@@ -173,9 +182,6 @@ body {
 #App > div:not(:first-child) {
   @media (min-width: 500px) {
     margin-left: 60px;
-  }
-  @media (max-width: 500px) {
-    margin-top: 60px;
   }
   padding: 40px 80px;
   font-size: 105%;
