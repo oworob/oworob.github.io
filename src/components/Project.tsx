@@ -18,8 +18,8 @@ interface ProjectProps {
 
 export function Project({ project }: ProjectProps) {
   return (
-    <div id="Project">
-      <div id="header">
+    <main id="Project">
+      <header id="header">
         <h1>
           {project.title} <i className={`${project.icon} shake`} id="icon" />
         </h1>
@@ -27,14 +27,18 @@ export function Project({ project }: ProjectProps) {
         <div id="subheader">
           <div id="left">{project.about}</div>
           {project.logo && (
-            <img id="logo" src={project.logo} alt={project.title} />
+            <img
+              id="logo"
+              src={project.logo}
+              alt={`${project.title}-project-logo`}
+            />
           )}
         </div>
-      </div>
+      </header>
       <hr />
 
-      <div id="content">
-        <div id="more">
+      <section id="content">
+        <nav id="more">
           {project.github && (
             <a className="button" id="link" href={project.github}>
               View on GitHub
@@ -52,14 +56,18 @@ export function Project({ project }: ProjectProps) {
           {project.features && (
             <Collapsable title="Features">{project.features}</Collapsable>
           )}
-        </div>
+        </nav>
 
         <div id="images">
           {project.images.map((url: string, i: number) => (
-            <img src={url} key={i} alt={project.title} />
+            <img
+              src={url}
+              key={i}
+              alt={`${project.title}-project-image-${i}`}
+            />
           ))}
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

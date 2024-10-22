@@ -4,14 +4,14 @@ import { Collapsable } from './Collapsable';
 
 export function Skills() {
   return (
-    <div id="Skills">
-      <div id="header">
+    <main id="Skills">
+      <header id="header">
         <h1>
           Skills <i className="fas fa-wrench shake" id="icon" />
         </h1>
         <p>Everyone has some.</p>
         <hr />
-      </div>
+      </header>
 
       <Collapsable
         title={
@@ -179,6 +179,6 @@ export function Skills() {
         </Link>{' '}
         :)
       </h4>
-    </div>
+    </main>
   );
 }

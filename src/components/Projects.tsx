@@ -21,14 +21,14 @@ export function Projects() {
   const projectsData: ProjectsObject = projects;
 
   return (
-    <div id="Projects">
-      <div id="header">
+    <main id="Projects">
+      <header id="header">
         <h1>
           Projects <i className="fas fa-pen shake" id="icon" />
         </h1>
         <p>I made things.</p>
         <hr />
-      </div>
+      </header>
 
       {Object.entries(projectsData).map(([id, project]) => (
         <div id="project-wrapper" key={id}>
@@ -63,7 +63,10 @@ export function Projects() {
               </div>
             </div>
             <Link id="image" to={id}>
-              <img src={project.images[0]} alt={id} />
+              <img
+                src={project.images[0]}
+                alt={`${project.title}-main-image`}
+              />
             </Link>
           </div>
           <hr />
@@ -77,6 +80,6 @@ export function Projects() {
         </a>
         , including code and installation.
       </h4>
-    </div>
+    </main>
   );
 }

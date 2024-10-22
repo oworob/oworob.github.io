@@ -29,7 +29,7 @@ export function Nav() {
 
       <div id="links">
         {Object.entries(links).map(([path, { icon, text }]) => (
-          <Link key={path} to={path} onClick={() => SetShowNav(false)}>
+          <Link key={path} to={path}>
             <div id="link">
               <i className={`fas ${icon}`} id="icon" />
               <span className={location.pathname === path ? 'bold' : ''}>

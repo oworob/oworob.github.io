@@ -23,17 +23,17 @@ const contacts: object = {
 
 export function Contact() {
   return (
-    <div id="Contact">
-      <div id="header">
+    <main id="Contact">
+      <header id="header">
         <h1>
           Contact <i className="fas fa-envelope shake" id="icon" />
         </h1>
         <p>Let's get in touch.</p>
         <hr />
-      </div>
+      </header>
 
-      <div id="content">
-        <div id="contacts">
+      <section id="content">
+        <article id="contacts">
           {Object.entries(contacts).map(([id, data]) => (
             <div key={id} id="contact">
               <a href={data.link}>
@@ -47,8 +47,8 @@ export function Contact() {
               <p id="about">{data.about}</p>
             </div>
           ))}
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+    </main>
   );
 }

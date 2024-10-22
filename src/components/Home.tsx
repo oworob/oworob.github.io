@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export function Home() {
   return (
-    <div id="Home">
-      <div id="header">
+    <main id="Home">
+      <header id="header">
         <h1>
           Hello there! <i className="fas fa-hand shake color" id="icon" />
         </h1>
@@ -16,9 +16,9 @@ export function Home() {
           Shall we create something together?{' '}
           <i className="fas fa-palette color" id="icon" />
         </h4>
-      </div>
+      </header>
 
-      <div id="content">
+      <section id="content">
         <h4>
           What am I up to now? <i className="fas fa-glasses color" id="icon" />
         </h4>
@@ -36,18 +36,12 @@ export function Home() {
           <li>Angular with Material</li>
           <li>Vue3</li>
         </ul>
-        <p>
-          And playing{' '}
-          <a href="https://cssbattle.dev/" className="color bold hoverlink">
-            CSS Battles!
-          </a>
-        </p>
-      </div>
+      </section>
 
       <hr />
-      <div id="bottom">
+      <footer id="bottom">
         <p>While you are here, feel free to take a look :)</p>
-        <div id="links">
+        <nav id="links">
           <Link to="/skills" className="button">
             Skills
           </Link>
@@ -63,8 +57,8 @@ export function Home() {
           >
             LinkedIn
           </a>
-        </div>
-      </div>
-    </div>
+        </nav>
+      </footer>
+    </main>
   );
 }

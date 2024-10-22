@@ -179,7 +179,7 @@ body {
   }
 }
 
-#App > div:not(:first-child) {
+#App > main:not(:first-child) {
   @media (min-width: 500px) {
     margin-left: 60px;
   }
@@ -539,11 +539,15 @@ body {
 #Experience {
   gap: 20px !important;
   width: 100%;
+  #look-at-cv {
+    margin-bottom: 16px;
+  }
 
   #job-list {
     display: flex;
     flex-direction: column;
     margin-top: 0;
+
     #position-wrapper {
       display: grid;
       grid-template-columns: 2px auto;

@@ -35,24 +35,24 @@ const jobs = [
 
 export function Experience() {
   return (
-    <div id="Experience">
-      <div id="header">
+    <main id="Experience">
+      <header id="header">
         <h1>
           Experience <i className="fas fa-briefcase shake" id="icon" />
         </h1>
         <p>The story so far.</p>
         <hr />
-      </div>
-      <p>
+      </header>
+      <h4 id="look-at-cv">
         While you are here, feel free to take a look at my{' '}
         <a href="/cv_olga_worobjew.pdf" className="hoverlink bold color">
           CV
         </a>
         !
-      </p>
+      </h4>
 
-      <div id="content">
-        <div id="job-list">
+      <section id="content">
+        <ul id="job-list">
           {jobs.map((job, index) => (
             <div id="position-wrapper" key={index}>
               <div id="timeline-piece">
@@ -67,14 +67,14 @@ export function Experience() {
                     <div id="about">{job.about}</div>
                   </div>
                   <div id="imgwrapper">
-                    <img src={job.picture} alt={job.company}></img>
+                    <img src={job.picture} alt={`${job.company}-logo`}></img>
                   </div>
                 </div>
               </li>
             </div>
           ))}
-        </div>
-      </div>
-    </div>
+        </ul>
+      </section>
+    </main>
   );
 }
